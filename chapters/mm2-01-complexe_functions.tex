@@ -1,6 +1,7 @@
-\subsection{Komplexe Zahl -> komplexe Analysis}
+\subsection{Komplexe Funktionen}
+\subsubsection{Komplexe Zahl -> komplexe Analysis}
 
-\paragraph{Definiton: } $z \in \mathbb{C}$: Tupel $(a,b)$ mit $a, b \in \mathbb{R}$ für die gilt:
+\paragraph{Definiton:} $z \in \mathbb{C}$: Tupel $(a,b)$ mit $a, b \in \mathbb{R}$ für die gilt:
 
 Addition: $(a,b)\pm(u,v) = ((a \pm u),(b \pm v))$
 
@@ -10,19 +11,19 @@ Körper:
 \begin{itemize}
     \item Assoziativgesetzt und Kommutativgestz
     
-    $Z_1 \times (Z_2 \times Z_3)$
+    $z_1 \times (z_2 \times z_3)$
 
-    $Z_1 \times Z_2 = Z_2 \times Z_1$
+    $z_1 \times z_2 = z_2 \times z_1$
 
     für für Addition ($\times \triangleq +$) und Multiplikation ($\times \triangleq \cdot$).
 
-    \item Distributivgesetz: $Z_1\cdot(Z_2 + Z_3) = Z_1 \cdot Z_2 + Z_1 \cdot Z_3$
+    \item Distributivgesetz: $z_1\cdot(z_2 + z_3) = z_1 \cdot z_2 + z_1 \cdot z_3$
 \end{itemize}
 
 Inverse: 
 \begin{itemize}
-    \item Addition: $Z + (-Z) = 0$
-    \item Multiplikation: $Z \cdot \frac{1}{Z} = 1$ $(Z \neq 0)$
+    \item Addition: $z + (-z) = 0$
+    \item Multiplikation: $z \cdot \frac{1}{z} = 1$ $(z \neq 0)$
 \end{itemize}
 
 Neutrale: 
@@ -32,3 +33,105 @@ Neutrale:
 \end{itemize}
 
 $\implies$ "unitärer Ring" (Aber: keine Anordnungseigenschaft.)
+
+\paragraph{Definition:} $z:= a + i b$ mit $i^2 = -1$ ($a,b \in \mathbb{R}$)
+
+\paragraph{Betrag} einer kompleen Zahl: uklidische Norm: $|z| := |(a,b)| = \sqrt{a^2+b^2}$
+
+\paragraph{Definition:} Komplee Konjugation: $z^*:=a-ib$ zu $z = a + ib$
+
+$\implies |z| = \sqrt{z \cdot z^*}$
+
+\underline{Realteil:} $Re(z) = \frac{1}{2}(z+z^*) = a$
+
+\underline{Imaginärteil:} $Im(z) = \frac{1}{2i}(z-z^*) = b$
+
+\paragraph{Potenzen:} 
+
+$z^n = z \cdot z \cdot ... \cdot z$ (n-mal)
+
+$z^{-n} = \frac{1}{z} \cdot \frac{1}{z} \cdot ... \cdot \frac{1}{z}$ (n-mal)
+
+wobei: $\frac{1}{z} = \frac{z^*}{z \cdot z^*} = \frac{x-iy}{x^2+y^2}$ für $z:=x+iy$ $x,y \in \mathbb{R}$
+
+($\implies f(z) = \frac{1}{z} := u + iv$ Normalform,  $u,v \in \mathbb{R}$)
+
+\newpage
+\paragraph{Darstellung in 2D Ebene:} $z := x + i y$
+
+\begin{figure}[htb!]
+ \centering
+ \includegraphics[width=5cm]{chapters/mm2-01-complexe_functions/mm2-01-01-darstellung_in_2d_ebene.png}
+\end{figure}
+
+-> auch darstellbar durch Betrag $|z|$ und Winkel $\alpha$ ($:=$ "Argument").
+
+
+
+\subsubsection{Komplexe Funktionen}
+\begin{enumerate}
+    \item \underline{Polynome} (vom Grad n): $P_n(z) = a_n z^n + a_{n-1} z^{n-1}+ ... + a_1 z + a_0$ mit $a_i \in \mathbb{C}, a_n \neq 0$; $n \in N_0$
+    \underline{z.B.:} $w=f(z) = z^2 = (x+iy)^2 = (x^2-y^2) + i(2xy) = u + i v$
+    \item \underline{Rationale Funktionen:} $\frac{P_n(z)}{Q_m(z)}$ mit Polynom $P_n, Q_m$
+    \item \underline{Potenzreihen:} $P(z) = \sum\limits_{n=0}^\infty a_n z^n$ mit $a_n \in \mathbb{C}$
+
+    -> Konvergenz ?
+
+    relle Funkton: "Konvergenzradius"
+
+    -> komplexe Funktionen: offene Kresscheibe um $0 in \mathbb{C}$ mit Radius $r$.
+\end{enumerate}
+
+\subsubitem{Geometrische Darstellung}
+
+\begin{itemize}
+    \item Darstellung von $u(x,y)$ und $v(x,y)$ separat als Funktionen von $x,y$ (Z.B "Höhenlinien" in 2D)
+    \item Darstellung als Vektorfeld 
+    $
+    \begin{pmatrix}
+        u(x,y)\\
+        v(x,y)
+    \end{pmatrix}$: 
+    \begin{figure}[htb!]
+        \centering
+        \includegraphics[width=5cm]{chapters/mm2-01-complexe_functions/mm2-01-02-darstellung als vektorfeld.png}
+    \end{figure}
+
+    \item $(z,w)$ Darstellung:
+    \begin{figure}[htb!]
+        \centering
+        \includegraphics[width=10cm]{chapters/mm2-01-complexe_functions/mm2-01-03-z-w-darstellung.png}
+    \end{figure}
+\end{itemize}
+\newpage
+\underline{Beispiel:} $f(z) = z^2 = (x^2-y^2) + i(2xy)$
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=10cm]{chapters/mm2-01-complexe_functions/mm2-01-04-example.png}
+\end{figure}
+
+Suche die Kurven in der z-Ebene, die auf ein orthogonals karteschies Netz in der w-Ebene abgebildet werden. (hier: Scharen orthogonaler Hyprbahn.)
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=2.5cm]{chapters/mm2-01-complexe_functions/mm2-01-05-small-grafiks.png}
+\end{figure}
+
+\subsubsection{Exponentalfunktion}
+\paragraph{Definition:} $\exp:\mathbb{C} \rightarrow \mathbb{C}, z \mapsto \sum\limits_{k=0}^\infty \frac{z^k}{k!}$
+
+$f(z)=\exp(z)=e^z$ ist auf \underline{ganz $\mathbb{C}$} konvergent. 
+
+(Beweis: analog wie in $\mathbb{R}$ mit Quotienten-Kriterium.)
+
+\paragraph{Euler-Formel:} $\exp(i\alpha) = \cos(\alpha)+ i \sin(\alpha)$ $\forall \alpha \in \mathbb{R}$
+
+\paragraph{Beweis:} 
+\begin{align*}
+    \exp(i\alpha) &= \sum\limits_{k=0}^\infty i^k\frac{\alpha^k}{k!} \\
+    &= \sum\limits_{k=0}^\infty i^{2k}\frac{\alpha^{2k}}{(2k)!} + \sum\limits_{k=0}^\infty i^{2k+1}\frac{\alpha^{2k+1}}{(2k+1)!} \\
+    &= \sum\limits_{k=0}^\infty (-1)^{k}\frac{\alpha^{2k}}{(2k)!} + i \sum\limits_{k=0}^\infty (-1)^{k}\frac{\alpha^{2k+1}}{(2k+1)!} \\
+    &= \cos(\alpha) + i \sin(\alpha)
+\end{align*}
+Für die efinition von $\cos,\sin$.
+
+Durch geeignete \underline{Definition} von $\sin(z)$ und $cos(z)$: $(\alpha \rightarrow z)$ Euler-Formel auch für $z\in \mathbb{C}$ gültg!
