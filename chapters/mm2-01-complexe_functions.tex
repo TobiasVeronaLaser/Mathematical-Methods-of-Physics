@@ -61,7 +61,7 @@ wobei: $\frac{1}{z} = \frac{z^*}{z \cdot z^*} = \frac{x-iy}{x^2+y^2}$ für $z:=x
 
 \begin{figure}[htb!]
  \centering
- \includegraphics[width=5cm]{chapters/mm2-01-complexe_functions/mm2-01-01-darstellung_in_2d_ebene.png}
+ \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-01-darstellung_in_2d_ebene.png}
 \end{figure}
 
 -> auch darstellbar durch Betrag $|z|$ und Winkel $\alpha$ ($:=$ "Argument").
@@ -94,26 +94,26 @@ wobei: $\frac{1}{z} = \frac{z^*}{z \cdot z^*} = \frac{x-iy}{x^2+y^2}$ für $z:=x
     \end{pmatrix}$: 
     \begin{figure}[htb!]
         \centering
-        \includegraphics[width=5cm]{chapters/mm2-01-complexe_functions/mm2-01-02-darstellung als vektorfeld.png}
+        \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-02-darstellung als vektorfeld.png}
     \end{figure}
 
     \item $(z,w)$ Darstellung:
     \begin{figure}[htb!]
         \centering
-        \includegraphics[width=10cm]{chapters/mm2-01-complexe_functions/mm2-01-03-z-w-darstellung.png}
+        \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-03-z-w-darstellung.png}
     \end{figure}
 \end{itemize}
 \newpage
 \underline{Beispiel:} $f(z) = z^2 = (x^2-y^2) + i(2xy)$
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=10cm]{chapters/mm2-01-complexe_functions/mm2-01-04-example.png}
+    \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-04-example.png}
 \end{figure}
 
 Suche die Kurven in der z-Ebene, die auf ein orthogonals karteschies Netz in der w-Ebene abgebildet werden. (hier: Scharen orthogonaler Hyprbahn.)
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=2.5cm]{chapters/mm2-01-complexe_functions/mm2-01-05-small-grafiks.png}
+    \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-05-small-grafiks.png}
 \end{figure}
 
 \subsubsection{Exponentalfunktion}
@@ -134,4 +134,43 @@ $f(z)=\exp(z)=e^z$ ist auf \underline{ganz $\mathbb{C}$} konvergent.
 \end{align*}
 Für die efinition von $\cos,\sin$.
 
-Durch geeignete \underline{Definition} von $\sin(z)$ und $cos(z)$: $(\alpha \rightarrow z)$ Euler-Formel auch für $z\in \mathbb{C}$ gültg!
+Durch geeignete \underline{Definition} von $\sin(z)$ und $cos(z)$: $(\alpha \rightarrow z)$ Euler-Formel auch für $z\in \mathbb{C}$ gültig!
+
+\subsubsection{Trigonometrisch Funktionen:}
+
+$\cos(z) = \frac{1}{2}(e^{iz}+e^{-iz})$, $\sin(z) = \frac{1}{2i}(e^{iz} - e^{-iz})$ 
+
+$\implies$
+\begin{itemize}
+    \item $\tan(z):=\frac{\sin(z)}{\cos(z)}=\frac{1}{\cot(z)}$
+    \item $\sin^2(z) + \cos^2(z) = 1$
+\end{itemize}
+
+\paragraph{Hyperbelfunktionen:}
+
+$\cosh(z) := \frac{1}{2}(e^z+e^{-z})$
+
+$\sinh(z) := \frac{1}{2}(e^z-e^{-z})$
+
+$\implies \cosh^2(z)+\sinh^2(z) = 1$
+
+\paragraph{Exponentialfunktion und Polarsdarstellung:}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-06-exponentialfunktion und polararstellung.png}
+\end{figure}
+
+$z = (a,b) = a + ib = \sqrt{a^2+b^2}\cdot(\cos(\alpha), \sin(\alpha)) = |z|\exp(i\alpha)$ wobei $\alpha := \arg(z)$ das "Argument" von $z$ ist.
+
+\paragraph{Exponentialfunktion:} $e^w\cdot e^z = w^{w\cdot z}$ für $w,z \in \mathbb{C}$ auch: $e^{i\alpha}\cdot e^{i\beta} = e^{i(\alpha + \beta)}$ für $\alpha, \beta \in \mathbb{R}$
+
+Damit: $e^z = e^{x+iy} = e^x\cdot e^{iy} = e^z \cdot(\cos(y) + i \sin(y))$ mit $|e^z| = e^x$ und $ = \arg(e^z)$
+
+(Beweis für $e^w\dot e^z = e^{w+z}$: siehe Lehrbücher)
+
+\paragraph{Produkt:}$z \cdot w=|z|\cdot|w|\cdot e^{i(\alpha + \beta)}$ für $z:=|z|\cdot e^{i\alpha}$ und $w:=|w|\cdot e^{i\beta}$
+
+-> Interpretation: Drehung um $\beta$ und Streckung um $|w|$ von $z$ .
+
+(Achtung: in der Regel ist $z\cdot w \in \mathbb{C} \implies$ \underline{kein} "Skalarprodukt"!)
