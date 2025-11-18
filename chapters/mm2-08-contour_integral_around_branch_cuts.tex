@@ -1,0 +1,123 @@
+\subsection{Integrale um Schnitte}
+\subsubsection{Endliche Schnitte}
+\underline{Beispiel:} $f(z) = \ln(\frac{z + 1}{z - 1})$ für $z \neq \pm 1$
+
+Wähle Schnitt auf reeler Achse ($y=0$) mit $-1 < x < +1$: darin ist $\frac{z+1}{z-1}$ reell und negativ, und $-\pi < \arg(\frac{z+1}{z-1}) \leq + \pi$.
+\paragraph{Aufgabe:} bestimme $\oint\limits_{C_r(0)} f(z) dz$ für Kreis um $0$ mit $R>1$.
+
+\includegraphics[height=2.5cm]{chapters/mm2-08/mm2-08-01.png}
+
+Sei $z+1:=r_1e^{i\theta_1}$, $z+1:=r_2e^{i\theta_2}$ bzw. $z =-1 + r_1e^{i\theta_1}$, $z =+1 + r_2e^{i\theta_2}$
+
+\includegraphics[height=2.5cm]{chapters/mm2-08/mm2-08-02.png}
+
+$\implies \ln\frac{z+1}{z-1} = \ln|\frac{r_1}{r_2}| + i(\theta_1-\theta_2+2\pi m)$ 
+
+hier: Hauptwert -> $m:=0$
+
+$\theta_1, \theta_2 \in (-\pi, \pi]$
+
+Zuerst: geschlossene Kurve außerhalb des Schnitts:
+
+\includegraphics[height=2.5cm]{chapters/mm2-08/mm2-08-03.png}
+
+$\implies \oint\limits_c f(z) dz = 0$
+
+
+$\implies \oint\limits_{C_{R>1}(0)} f(z) dz = -\oint\limits_{C_2} f(z) dz =
+-\oint\limits_{C_\epsilon(-1)} f(z) dz -\oint\limits_{C_\epsilon(+1)} f(z) dz +
+\lim\limits_{\epsilon \rightarrow 0} \int\limits_{+1}^{-1} f(x - i \epsilon) dx +
+\lim\limits_{\epsilon \rightarrow 0} \int\limits_{-1}^{+1} f(x + i \epsilon) dx
+(+\int\limits_{+1\Leftrightarrow r} f(z) dz)$
+
+1: $C_\epsilon(+1):$ $f(z)?\frac{z + 1}{z - 1} \stackrel{z \rightarrow +1}{\approx} \ln(2) - \ln(z - 1)$ ($z\neq 1$)
+
+$\oint\limits_{c_\epsilon(1)} \ln(z-1) dz = [z := 1 + \epsilon e^{it}] = \int\limits_0^{2\pi} \ln(\epsilon e^{it}) \epsilon i e^{it} dt \approx \int\limits_0^{2\pi} O(\epsilon\ln\epsilon) dt \rightarrow 0$
+
+wobei $\ln(\epsilon e^{it}) = \ln|\epsilon e^{it}| + it + \ln(\epsilon) + it$
+
+$\lim\limits_{\epsilon \rightarrow 0} \epsilon \ln(\epsilon) = \lim\limits_{\epsilon \rightarrow 0} \frac{\ln(\epsilon)}{\frac{1}{\epsilon}} \stackrel{\text{l'Hospital}}{=} \lim\limits_{\epsilon \rightarrow 0} \frac{\frac{1}{\epsilon}}{-\frac{1}{\epsilon^2}} = \lim\limits_{\epsilon \rightarrow 0} - \epsilon \rightarrow 0$
+
+2. $C_{\epsilon}:\int\limits_{C_\epsilon(-1)}f(z)d(z)\approx\oint\limits_{C_\epsilon(-1)}\ln(z+1)-\ln(-z)$ ($z\neq-1$)
+
+$\oint[C_\epsilon^*(+1)+C_\epsilon(-1)]=0$
+
+tragen nichts bei.
+
+$\implies \oint\limits_{C_{R>1}(0)} f(z)dz$ hängt nur von Differenz der Funktionswerte entlang des Schnitts ab.
+
+$\implies \oint\limits_{C_{R>1}(0)} f(z)dz = ... = \lim\limits_{\epsilon\rightarrow 0}\int\limits_{-1}^{+1} [f(x+i\epsilon)] - f(x-i\epsilon) dx$
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-04.png}
+
+$y:=0\pm\epsilon$, $x \in (-1, +1)$
+
+$\implies r_1 = 1+x$, $R_2 = 1 - x$
+
+Argument: $- \pi < \theta_1, \theta_2 \leq + \pi$.
+
+I) $x < -1$: $+\epsilon$: $\theta_1 = \pi$, $\theta_2 = \pi \implies \Im(f) = \theta_1 - \theta_2 = 0$ (für $m:=0$)
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-05.png}
+
+$-\epsilon$: $\theta_1 = -\pi$, $\theta_2 = -\pi \implies \Im(f) = 0$
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-06.png}
+
+II) $-1 < x < 1$: $+\epsilon$: $\theta_1 = 0$, $\theta_2 = \pi \implies \Im(f) = -\pi$
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-07.png}
+
+$-\epsilon$: $\theta_1 = 0$, $\theta_2 = -\pi \implies \Im(f)=+\pi \neq -\pi$
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-08.png}
+
+III) $x > +1$: $\pm\epsilon \implies \Im(f) = 0$ (analog zu I))
+
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-09.png}
+
+$\implies f(x + i\epsilon) = \ln|\frac{r_1}{r_2}| + i (-pi)$ für $-1 < x < +1$
+
+$f(x - i\epsilon) = \ln|\frac{r_1}{r_2}| + i pi$
+
+mit $r_1=|x-(-1)| = |x + 1| > 0$
+
+$r_2=|x-(+1)| = |x - 1| > 0$
+
+$\implies f(x + i\epsilon) - f(x - i\epsilon) = - 2 \pi i$
+
+$\implies \oint\limits_{C_{R>1}(0)} \ln(\frac{z+1}{z-1}) dz = -\int\limits_{-1}^{+1} [f(x + i\epsilon) - f(x - i\epsilon)] dx = 4\pi i$. mit 
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-10.png}
+
+\subsubsection{Unendliche Schnitte}
+
+\paragraph{Beispiel} $\int\limits_{0}^{\infty} \frac{\sqrt{x}}{1+^2} dx = ? \Leftrightarrow \oint\limits_{C_{R\rightarrow \infty}} \frac{\sqrt{z}}{1+z^2} dz$, wobei $\frac{\sqrt{x}}{1+x^2} \stackrel{R\rightarrow\infty}{\rightarrow} \frac{x^{\frac{1}{2}}}{x^2} = x^{-\frac{3}{2}}$
+ störker als $\frac{1}{}$ abfällt.
+
+\includegraphics[height=2.5cm]{mm2-08/mm2-08-11.png}
+
+$C_\epsilon(0)$: $t(z):=\epsilon e^{it}$ mit $t\in[0, 2\pi)$:
+
+$\oint\limits_{C_\epsilon} \frac{\sqrt{z}}{1+z^2} dz = \int\limits_{0}^{2\pi} \frac{\sqrt{\epsilon e^{it}}}{1+(\epsilon e^{it})} i\epsilon e^{it} dt = i e^{\frac{3}{2}}\int\limits_{0}^{2\pi} \frac{e^{r i \frac{1}{2} t}}{1 + \epsilon^2 e^{2i t}} dt$
+
+$\rightarrow 0$ für $\epsilon \rightarrow 0$
+
+$\int\limits_{0}^{\infty} \frac{\sqrt{x}}{1+x} dx \widehat{=} \int\limits_{0}^{\infty} \frac{\sqrt{z}}{1 + z^2} dz$
+
+wobei $\int\limits_{\infty}^{0} \frac{\sqrt{z}}{1 + z^2} dz = \int\limits_{\infty}^{0} \frac{\sqrt{r e^{2 \pi i}}}{1 + r^2 e^{4 \pi i}} dr = $ [für $z := r e^{i\phi}$ mit $\phi := 2 \pi$, da $e^{i\pi} = \cos(\pi) + i \sin(\pi) = -1$] $=\int\limits_{0}^{\infty} \frac{\sqrt{r}}{1 + r^2} dr = \int\limits_{0}^{\infty} \frac{\sqrt{x}}{1+x^2} dx \implies$ identisch.
+
+$\implies \oint\limits_{C} \frac{\sqrt{z}}{1+z^2} dz = 2 \cdot \int\limits_{0}^{\infty} \frac{\sqrt{x}}{1+^2} dx + 0$
+
+($\neq 0$ da zwei einfache Pole enthalten!)
+
+$\operatorname{Res}[\frac{\sqrt{z}}{1+z^2}]{z = +i} = \frac{\sqrt{i}}{2i} = \frac{\sqrt{2}}{4i}(1+i)$
+
+$\operatorname{Res}[\frac{\sqrt{z}}{1+z^2}]_{z = -i} = \frac{\sqrt{-i}}{2i} = \frac{\sqrt{2}}{4i}(1-i)$
+
+wobei Hauptwert: $\sqrt{\pm i} = \sqrt{|i|} e^{\pm i \frac{\pi}{2}} = \cos(\pm\frac{\pi}{2}) + i \sin(\pm\frac{\pi}{2}) = \frac{1}{\sqrt{2}}(1 \pm i)$
+
+und $\operatorname{Res}[\frac{\sqrt{z}}{(z + i)(z - i)}]_{z = \pm i} = \lim\limits_{z\rightarrow \pm i} (z \pm i)\frac{\sqrt{z}}{(z + 1)(z - i)} = \frac{\sqrt{\pm i}}{2 i}$
+
+$\implies \int\limits_{0}^{\infty} \frac{\sqrt{x}}{1 + x^2} dx = \frac{1}{2} 2 \pi i [\frac{\sqrt{2}}{4i}(1 + i) + \frac{\sqrt{2}}{4 i}(1 - i)] = \frac{1}{2}\sqrt{2}\pi$
