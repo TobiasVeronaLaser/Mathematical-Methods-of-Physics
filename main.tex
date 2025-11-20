@@ -17,7 +17,7 @@
 \usepackage{csquotes} % Fortgeschrittene Funktionen für Zitate, für die deutsche Form der Anführungszeichen bei Referenzen
 \addbibresource{MyBibliography.bib} % Ort der .bib Datei, die die Datenbank für Literatur/Referenzen enthält.
 
-\graphicspath{{images/}}
+\graphicspath{{images/} {chapters/}}
 
 \DeclareSIUnit{\dBm}{dBm}
 \DeclareSIUnit[per-mode=reciprocal]\WN{\per\centi\meter}
@@ -45,5 +45,26 @@
 %
 %
 \section{Funktionentheorie}
+\newpage
 \input{chapters/mm2-01-complexe_functions}
+\newpage
+\input{chapters/mm2-02-complexe_reversal_function.tex}
+\newpage
+\input{chapters/mm2-03-complex_derivation.tex}
+\newpage
+\input{chapters/mm2-04-complex_integration.tex}
+\newpage
+\newpage
+\input{chapters/mm2-05-complex_power_series.tex}
+\newpage
+\input{chapters/mm2-06-residue_theorem.tex}
+\newpage
+\input{chapters/mm2-07-improper_real_integration.tex}
+\newpage
+\input{chapters/mm2-08-contour_integral_around_branch_cuts.tex}
+\newpage
+\input{chapters/mm2-09-partial_differential_equation.tex}
+\newpage
+\input{chapters/mm2-10-laplace-equation.tex}
+\newpage
 \end{document}
