@@ -1,0 +1,137 @@
+\subsection{Komplexe Umkehrfunktionen}
+\subsubsection{Eindeutige Funktionen}
+
+Eine komplexe Funktion heißt \underline{eindeutig}, wenn es für jeden Wert $z \in D \subset \mathbb{C}$ genau einen Funktionswert $w = f(z) \in \mathbb{C}$ gibt. ($D:=$ Definitionsbereich).
+
+Beispiel: $f(z) = z^2$, $f(z)=e^z$
+
+\underline{Mehrwertige} Funktionen: z.B. $f(z)=\sqrt{z}$, $f(z)=\log(z)$
+
+(-> Verzweigungsspunkte/ Schnitte)
+
+\paragraph{Eine} komplexe Funktion ist \underline{injektiv}, wenn für $z_1 \neq z_2$ folgt, dass auch $f(z_1) \neq f(z_2)$. (Bzw. $f(z_1) = f(z_2) \implies z_1 = z_2$).
+
+\underline{Beispiel:} $f(z) = z^2$ ist \underline{eindeutig}, aber nicht \underline{injektiv}.
+
+\underline{surjektiv:} für $f:z\in D\subset\mathbb{C} \rightarrow w\in W \subset \mathbb{C}$ gitl: fpr jedes $w \in W$ existiert ein $z \in D$, sodass $f(z) = w$. -> dann existiert eine umkehrfunktion $f^{-1}: W \rightarrow D$, die ebenfalls eindeutig ("wohldefniert") ist.
+
+(\underline{Bijektiv: sowohl injektiv als auch surjektiv}).
+
+\underline{Beispiel}
+\begin{itemize}
+    \item $f(z) = a z + b$, $a \neq 0$: injektiv und surjektiv
+    \item $f(z) = z^2$, nicht injektiv(da $f(1) = f(-1) = 1$), aber surjektiv (da in $\mathbb{C} jede Wurzel lösbar ist$).
+\end{itemize}
+
+Die komplexe Exponentialfunktion ist \underline{nicht injektiv}:
+
+$f(z) = e^z = w$ mit$w := |w| (\cos(\alpha) + i \sin(\beta))$ mit $\alpha := \psi + 2\pi k$, $k \in \{0, \pm1, \pm2, ...\}$ $\implies$ 
+\begin{align*}
+    w =& |w|  [(\cos(\psi)\dot \cos(2\pi k) - \sin(\psi) \sin(i2 \pi k)+i(\sin(\psi)\cos(s\pi k) + \cos(\psi) \sin(2 \pi k)))] \\
+    =& |w|(\cos(\psi)+ i \sin(\psi))
+\end{align*}
+
+\underline{Abbldung:} $z \rightarrow w = e^z = e^x (\cos(y)+i\sin(y))$
+
+Exemplarisch: eine vertikale Gerade in $D \subset \mathbb{C}$ mit $Re(z) = x :=$ konstant f+r ein $x\in\mathbb{R}$
+
+\includegraphics[height=2.5cm]{mm2-02/01.png}
+
+$\rightarrow$ Abbildung auf $W$?
+
+$\rightarrow$ Kreis um $0$ mit Radius $e^x$:
+
+\includegraphics[height=2.5cm]{mm2-02/02.png}
+
+$\implies$ In $y\in\mathbb{R}$ ist diese Abbildung $2\pi$-periodisch
+
+\underline{Definition:} "geschlitzte Ebene": $\mathbb{C}^-$
+
+\underline{hier z.B.:} $\mathbb{C}^-:=\mathbb{C}\setminus\{w \in \mathbb{C}: \Im(W) = 0, \Re(W)\leq 0\} \Leftrightarrow$ komplexe Exponentialfunktion ist \underline{bijektiv} in $\{z\in\mathbb{C} : -\pi < \Im(z) < \pi\}$
+
+darin: Umkehrfunktion definierbar: "Hauptzweig der Logarithmusfunktion"
+
+\subsubsection{Komplexer Hauptzweig - Logarithmus}
+
+Für $z\in\mathbb{C}^-:$ (\underline{hier:} $-\pi < y < +\pi, x \in \mathbb{R}$) gilt:
+
+$z =  x + i y = \ln(e^z)$ $\leftrightarrow \ln$ Umkehrfunktion von $\exp$
+
+$= \ln(e^x  e^{iy})$
+
+Sei $f(z)=\ln(z) = w = u + i v$
+
+$\leftrightarrow z = e^w = e^{u + i v} = e^u  e^{iv} = |z| e^{i \alpha}$
+
+mit $|e^w| = e^u = |z| \implies u = \ln(z)$
+
+und $\arg(z) = \arg(e^w) = v =: \alpha$
+
+$\implies w = u + iv = ln|z| + i \arg(z) = \ln(z)$
+
+$\forall  x \in  \mathbb{R}$ un $y \in (-\pi, \pi)$ ! (eindeutig $\leftrightarrow$ "Hauptzweig")
+
+$\implies$ damit gilt auch: $\ln(z^*) = (\ln(z))^*$ $\forall z \in \mathbb{C}^-$
+
+\underline{Vorsicht:} im Allgemeinen ist $\ln(z  w) \neq \ln(z)   \ln(w)$
+
+\underline{Beispiel:} $z := 1 + i \implies |z| = \sqrt{2} \implies z = \sqrt{2}(\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}})$
+
+$\implies z = \sqrt{2}(\cos\frac{\pi}{4} + i \sin\frac{\pi}{4}) = \sqrt{2}\exp(i\frac{\pi}{4})$
+
+$\implies z = \ln(1 + i) = (\ln\sqrt{2}) + i (\frac{\pi}{4})$
+
+\underline{Beispiel:} Für $\ln(z   w) \neq \ln(z) + \ln(w)$:
+
+\begin{itemize}
+    \item $z := 1 + i \implies \ln(z) = \ln(\sqrt) + i(\frac{\pi}{4})$ (siehe vorhin)
+    \item $w := -1$
+\end{itemize}
+
+\underline{Hier:} geschlitzte Ebene mit  $\psi\in(-\pi, \pi]$ für $w:=|w|  e^{i\psi}$
+
+\includegraphics[height=2.5cm]{mm2-02/03.png}
+
+$\implies \ln(w) = \ln(1) + i\pi = 0 + i\pi$
+
+$\implies \ln(w) + \ln(z)  = \ln(\sqrt{z}) + i\frac{5\pi}{4}$
+
+\underline{Aber:} $\ln(w   z) = \ln(-1 -i) = \ln(\sqrt{z})  + i\frac{3\pi}{4}$
+
+\includegraphics[height=2.5cm]{mm2-02/04.png}
+
+\underline{Weiters:} (einfachstes) Beispiel: $w=-1$, $z=-1$
+
+\includegraphics[height=2.5cm]{mm2-02/05.png}
+
+$\ln(w) + \ln(z) = 2 \dot(0 + i\pi) = 2\pi  i$
+
+$\ln(w   z) = \ln(+1) = 0$
+
+(Jeweils wenn nach üblicher Konvention er "Schlitz" der Logarithmusfunktion auf der negativen reellen Achse definiert ist und $-\pi < \alpha \leq \pi$ gilt.)
+
+\subsubsection{Komplexe Wurzeln und ihre Hauptzweig}
+
+Sei $w \in \mathbb{C}$ mit $w = |w|\exp(i\alpha)$ mit $\alpha \in [0, 2pi)$.
+
+$rightarrow$ Für welche $z\in\mathbb{C}$ gilt: $t^n = w$ ? $\Leftrightarrow$ "$z:=\sqrt[n]{w}$"?
+
+$\implies z_k = \sqrt[n]{|w|}   \exp(i\frac{\alpha+2 \pi k}{n})$ mit $k \in \{0, 1, ... n - 1\}$
+
+d.h. obwohl $w = |w|(\cos\alpha + i \sin\alpha):=|w|(\cos(\alpha+2\pi k) + i \sin(\alpha+2\pi k))$ ist $\sqrt[n]{w}$ \underline{nicht} eindeuting, sondern mehrwertig $\rightarrow$ $z_k$.
+
+Für $w := 1$: n-te "Einheitwurzeln": $E_n = \exp(2\pi o \frac{k}{n})$ mit $k \in {0,1, ..., n-1}$
+
+$\implies z_k=\sqrt[n]{|w|}\exp(i\frac{\alpha}{n})E_n(k)$
+
+\underline{Allgemeinen}: $z\rightarrow z^n$ für $n\in\mathbb{n}, n\geq 2$ auf $\mathbb{C}$ \underline{nicht} injektiv.
+
+\underline{Einschränkung} auf Sektor $\{z \in \mathbb{C}| z = |z|e^{i\alpha} \text{ mit } -\frac{\pi}{n} < \alpha < \frac{\pi}{n}\}$ \underline{injektiv}
+
+$\implies$ \underline{hierin} Umkehrfunktion $:=$ "\underline{Hauptzweig} der n-ten Wurzelfunktion $:= \sqrt[n]{w}$
+
+Mehrdeutigkeit der Wurzelfunktion: Darstellung durch "Riemann'sche Blätter".
+
+\underline{Beispiel:} $w=f(z):=\sqrt{z} = \sqrt{|z|}e^{i\frac{\alpha + 2 \pi k}{2}}$ mit $k\in{0, 1}$ und $w := |w| e ^ {i \psi}$
+
+$\rightarrow$ \underline{Hauptzweig:} $k:=0 \Leftrightarrow$ Umkehrfunktion eindeutig.
