@@ -5,25 +5,25 @@
 
 Addition: $(a,b)\pm(u,v) = ((a \pm u),(b \pm v))$
 
-Multplikation: $(a,b)\cdot(u,v) = ((au - bv),(av + bu))$
+Multplikation: $(a,b) (u,v) = ((au - bv),(av + bu))$
 
 Körper:
 \begin{itemize}
     \item Assoziativgesetzt und Kommutativgestz
     
-    $z_1 \times (z_2 \times z_3)$
+    $\boxed{z_1 \times (z_2 \times z_3) = (z_1 \times z_2) \times z_3}$
 
-    $z_1 \times z_2 = z_2 \times z_1$
+    $\boxed{z_1 \times z_2 = z_2 \times z_1}$
 
-    für für Addition ($\times \triangleq +$) und Multiplikation ($\times \triangleq \cdot$).
+    für für Addition ($\times \triangleq +$) und Multiplikation ($\times \triangleq  $).
 
-    \item Distributivgesetz: $z_1\cdot(z_2 + z_3) = z_1 \cdot z_2 + z_1 \cdot z_3$
+    \item Distributivgesetz: $z_1 (z_2 + z_3) = z_1   z_2 + z_1   z_3$
 \end{itemize}
 
 Inverse: 
 \begin{itemize}
     \item Addition: $z + (-z) = 0$
-    \item Multiplikation: $z \cdot \frac{1}{z} = 1$ $(z \neq 0)$
+    \item Multiplikation: $z   \frac{1}{z} = 1$ $(z \neq 0)$
 \end{itemize}
 
 Neutrale: 
@@ -34,13 +34,13 @@ Neutrale:
 
 $\implies$ "unitärer Ring" (Aber: keine Anordnungseigenschaft.)
 
-\paragraph{Definition:} $z:= a + i b$ mit $i^2 = -1$ ($a,b \in \mathbb{R}$)
+\paragraph{Definition:} $\boxed{z:= a + i b \text{ mit } i^2 = -1 \text{ } (a,b \in \mathbb{R})}$
 
 \paragraph{Betrag} einer kompleen Zahl: uklidische Norm: $|z| := |(a,b)| = \sqrt{a^2+b^2}$
 
 \paragraph{Definition:} Komplee Konjugation: $z^*:=a-ib$ zu $z = a + ib$
 
-$\implies |z| = \sqrt{z \cdot z^*}$
+$\implies |z| = \sqrt{z   z^*}$
 
 \underline{Realteil:} $Re(z) = \frac{1}{2}(z+z^*) = a$
 
@@ -48,18 +48,18 @@ $\implies |z| = \sqrt{z \cdot z^*}$
 
 \paragraph{Potenzen:} 
 
-$z^n = z \cdot z \cdot ... \cdot z$ (n-mal)
+$z^n = z   z   ...   z$ (n-mal)
 
-$z^{-n} = \frac{1}{z} \cdot \frac{1}{z} \cdot ... \cdot \frac{1}{z}$ (n-mal)
+$z^{-n} = \frac{1}{z}   \frac{1}{z}   ...   \frac{1}{z}$ (n-mal)
 
-wobei: $\frac{1}{z} = \frac{z^*}{z \cdot z^*} = \frac{x-iy}{x^2+y^2}$ für $z:=x+iy$ $x,y \in \mathbb{R}$
+wobei: $\frac{1}{z} = \frac{z^*}{z   z^*} = \frac{x-iy}{x^2+y^2}$ für $z:=x+iy$ $x,y \in \mathbb{R}$
 
 ($\implies f(z) = \frac{1}{z} := u + iv$ Normalform,  $u,v \in \mathbb{R}$)
 
 \newpage
 \paragraph{Darstellung in 2D Ebene:} $z := x + i y$
 
-\includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-01.png}
+\includegraphics[height=2.5cm]{mm2-01/01.png}
 
 -> auch darstellbar durch Betrag $|z|$ und Winkel $\alpha$ ($:=$ "Argument").
 
@@ -90,19 +90,21 @@ wobei: $\frac{1}{z} = \frac{z^*}{z \cdot z^*} = \frac{x-iy}{x^2+y^2}$ für $z:=x
         v(x,y)
     \end{pmatrix}$: 
 
-    \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-02.png}
+    \includegraphics[height=2.5cm]{mm2-01/02.png}
 
     \item $(z,w)$ Darstellung:
     
-    \includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-03.png}
+    \includegraphics[height=2.5cm]{mm2-01/03.png}
 \end{itemize}
 \newpage
 \underline{Beispiel:} $f(z) = z^2 = (x^2-y^2) + i(2xy)$
 
-\includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-04.png}
+\includegraphics[height=2.5cm]{mm2-01/04.png}
 
-Suche die Kurven in der z-Ebene, die auf ein orthogonals karteschies Netz in der w-Ebene abgebildet werden. (hier: Scharen orthogonaler Hyprbahn.)
-\includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-05.png}
+\fbox{\parbox{0.9\linewidth}{Suche die Kurven in der z-Ebene, die auf ein orthogonals karteschies Netz in der w-Ebene abgebildet werden.}}
+
+(hier: Scharen orthogonaler Hyprbahn.)
+\includegraphics[height=2.5cm]{mm2-01/05.png}
 
 \subsubsection{Exponentalfunktion}
 \paragraph{Definition:} $\exp:\mathbb{C} \rightarrow \mathbb{C}, z \mapsto \sum\limits_{k=0}^\infty \frac{z^k}{k!}$
@@ -144,18 +146,18 @@ $\implies \cosh^2(z)+\sinh^2(z) = 1$
 
 \paragraph{Exponentialfunktion und Polarsdarstellung:}
 
-\includegraphics[height=2.5cm]{chapters/mm2-01/mm2-01-06.png}
+\includegraphics[height=2.5cm]{mm2-01/06.png}
 
-$z = (a,b) = a + ib = \sqrt{a^2+b^2}\cdot(\cos(\alpha), \sin(\alpha)) = |z|\exp(i\alpha)$ wobei $\alpha := \arg(z)$ das "Argument" von $z$ ist.
+$z = (a,b) = a + ib = \sqrt{a^2+b^2} (\cos(\alpha), \sin(\alpha)) = |z|\exp(i\alpha)$ wobei $\alpha := \arg(z)$ das "Argument" von $z$ ist.
 
-\paragraph{Exponentialfunktion:} $e^w\cdot e^z = w^{w\cdot z}$ für $w,z \in \mathbb{C}$ auch: $e^{i\alpha}\cdot e^{i\beta} = e^{i(\alpha + \beta)}$ für $\alpha, \beta \in \mathbb{R}$
+\paragraph{Exponentialfunktion:} $e^w  e^z = w^{w  z}$ für $w,z \in \mathbb{C}$ auch: $e^{i\alpha}  e^{i\beta} = e^{i(\alpha + \beta)}$ für $\alpha, \beta \in \mathbb{R}$
 
-Damit: $e^z = e^{x+iy} = e^x\cdot e^{iy} = e^z \cdot(\cos(y) + i \sin(y))$ mit $|e^z| = e^x$ und $ = \arg(e^z)$
+Damit: $e^z = e^{x+iy} = e^x  e^{iy} = e^z  (\cos(y) + i \sin(y))$ mit $|e^z| = e^x$ und $ = \arg(e^z)$
 
 (Beweis für $e^w\dot e^z = e^{w+z}$: siehe Lehrbücher)
 
-\paragraph{Produkt:}$z \cdot w=|z|\cdot|w|\cdot e^{i(\alpha + \beta)}$ für $z:=|z|\cdot e^{i\alpha}$ und $w:=|w|\cdot e^{i\beta}$
+\paragraph{Produkt:}$z   w=|z| |w|  e^{i(\alpha + \beta)}$ für $z:=|z|  e^{i\alpha}$ und $w:=|w|  e^{i\beta}$
 
 -> Interpretation: Drehung um $\beta$ und Streckung um $|w|$ von $z$ .
 
-(Achtung: in der Regel ist $z\cdot w \in \mathbb{C} \implies$ \underline{kein} "Skalarprodukt"!)
+(Achtung: in der Regel ist $z  w \in \mathbb{C} \implies$ \underline{kein} "Skalarprodukt"!)
