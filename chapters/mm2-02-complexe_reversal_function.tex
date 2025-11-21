@@ -135,3 +135,31 @@ Mehrdeutigkeit der Wurzelfunktion: Darstellung durch "Riemann'sche Blätter".
 \underline{Beispiel:} $w=f(z):=\sqrt{z} = \sqrt{|z|}e^{i\frac{\alpha + 2 \pi k}{2}}$ mit $k\in{0, 1}$ und $w := |w| e ^ {i \psi}$
 
 $\rightarrow$ \underline{Hauptzweig:} $k:=0 \Leftrightarrow$ Umkehrfunktion eindeutig.
+
+\includegraphics[height=2.5cm]{mm2-02/06.png}
+
+Für $\alpha = 0 + \epsilon \implies \psi = 0 + \epsilon \stackrel{\epsilon \rightarrow 0}{\implies} \cos\psi = +1$, $\sin\psi = 0$
+
+aber $\alpha = 2\pi - \epsilon \implies \psi = \pi - \epsilon \stackrel{\epsilon \rightarrow 0}{\implies} \cos\psi = -1$, $\sin\psi = 0$
+
+$\implies \lim\limits_{y\downarrow 0} \sqrt{x+i y} = \sqrt{x} = -\lim\limits_{y\uparrow 0} \sqrt{x + i y}$
+
+\includegraphics[height=2.5cm]{mm2-02/07.png}
+
+\underline{Mehrdeutigkeit des kompleen Logarithmus:}
+
+$\ln z = \ln |z| + i \arg z + i 2 \pi n =: \ln |z| + i \alpha_0 + i 2 \pi n$, $n \in \mathbb{Z}$
+
+\includegraphics[height=2.5cm]{mm2-02/08.png}
+
+\underline{Problem} (Siehe später...): geschlossene Kurven bei kompleen kurvenintralen ?!
+
+\subsubsection{Komplexe Potenzfunktion}
+
+Für $a\in \mathbb{C}$, $z\in \mathbb{C}^-$:
+
+$P_a: z \rightarrow r^\alpha := \exp(a \ln z) \Leftrightarrow$ \underline{Hauptzweig}
+
+\underline{Beispiel:} $i^i = \exp(i\ln i) = \exp(i\ln |i| + i i \arg i) = \exp(0+ i^2 \frac{\pi}{2}) = \exp(-\frac{pi}{2})$
+
+Es gilt: $z^a z^b = z^{a+b}$ $\forall a,b \in \mathbb{C}$, $z \in \mathbb{C}^-$ 
